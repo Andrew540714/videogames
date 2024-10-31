@@ -1,10 +1,17 @@
-<DOCTYPE HTML>
-<html>
+{% extends "layout.html" %}
+
+{% set active_page = "page1" %}
+
+{% block title %}Page 1{% endblock %}
+
+{% block content %}
+
 <h1> About Video Games <h1>
-<p>The data used in this web app is from the CORGIS Dataset Project and can be found <a href="https://corgis-edu.github.io/corgis/json/video_games/">here.</a> </p>
+<p>The data used in this web app is from the CORGIS Dataset Project and can be found <a href="https://corgis-edu.github.io/corgis/json/video_games/">here.</a> 
 The data states different things about video games released from 2004 to 2010. It shows what year the game was released and all the different playstyles.
 The playstyles have a average, leisure, median, polled, rushed. The average is the average time to beat the game. The leisure is the longest time it took people.
 The median is the the median time it took players to complete the game. The polled is the number of players competing the game in that playstyle. The rushed is the fastest time recorded. 
-The different playstyles are the following: Completionists is when they complete everything in the game. the Main + Extras is when they beat the game while doing the major extra parts
-. The storyline is the time it takes to beat the game doing the storyline.
-</html>
+The different playstyles are the following: Completionists is when they complete everything in the game. the Main + Extras is when they beat the game while doing the major extra parts.
+The storyline is the time it takes to beat the game doing the storyline.</p>
+
+{% endblock %}
