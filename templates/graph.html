@@ -7,6 +7,10 @@
 {% block content %}
     <!--page content-->
     <h1>Information</h1>
+	
+
+
+
 	<form action="/showGameFact">
           <select name="game">
             {{ value22 }}
@@ -15,6 +19,8 @@
           <input type="submit" value="Show the game info">
         </form>
         <div id="gameFacts">
-            <p>{{ gameFacts }}</p>
+            <p>{{ Year }}</p>
+			<p>{{ Price }}</p>
+			<p>{{ Console }}</p>
 	
 {% endblock %}

@@ -8,4 +8,41 @@
     <!--page content-->
     <h1>Money</h1>
 	
+		<script>
+		window.onload = function () {
+
+		var chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		exportEnabled: true,
+		theme: "light1", // "light1", "light2", "dark1", "dark2"
+		title:{
+		text: "Average Price Of Games Each Year"
+		},
+		axisY: {
+		includeZero: true
+		},
+		data: [{
+		type: "column", //change type to bar, line, area, pie, etc
+		//indexLabel: "{y}", //Shows y value on all Data Points
+		indexLabelFontColor: "#5A5757",
+		indexLabelFontSize: 16,
+		indexLabelPlacement: "outside",
+		dataPoints: [
+		{ x: 2004, y: 71 },
+		{ x: 2005, y: 55 },
+		{ x: 2006, y: 50 },
+		{ x: 2007, y: 65 },
+		{ x: 2008, y: 92, indexLabel: "\u2605 Highest" },
+		{ x: 2009, y: 68 },
+		]
+		}]
+		});
+		chart.render();
+
+		}
+</script>
+
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+	
 {% endblock %}
